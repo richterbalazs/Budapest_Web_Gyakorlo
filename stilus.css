@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+header {
+    grid-area: he;
+    background-color: #506a85;
+    height: 100px;
+}
+
+body{
+    background-image: url('kepek/v3.jpg');
+}
+
+main {
+    margin: auto;
+    border: 1px solid #7893ae;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #cfc6b5;
+    color: #456280;
+    display: grid;
+    grid-template-areas: 
+    "he he"
+    "na na"
+    "as ar"
+    "fo fo"
+    ;
+}
+
+nav {
+    grid-area: na;
+    padding: 30px;
+}
+
+nav ul {
+    grid-area: na;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    list-style-type: none;
+    color: #456280;
+}
+
+aside {
+    grid-area: as;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "el el"
+    "ma ma";
+    padding: 15px;
+    gap: 20px;
+}
+
+article {
+    grid-area: ar;
+    color: #456280;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid #456280;
+    border-collapse: collapse;
+    margin: auto;
+  }
+
+tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+
+td,th {
+    padding: 10px;
+    height: 10px;
+}
+
+th {
+    background-color: #456280;
+    color: white;
+}
+
+footer {
+    grid-area: fo;
+    text-align: center;
+    background-color: #506a85;
+    color: #cfc6b5;
+    height: 50px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 5px solid #456280;
+}
+
+@media only screen and (max-width: 800px) {
+    main{
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "he"
+        "na"
+        "ar"
+        "as"
+        "fo"
+        ;
+        border: #506a85 3px solid;
+        font-size: larger;
+        margin: 0px;
+    }
+    
+    nav ul li a{
+        font-size: 15px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    table{
+        width: 100%;
+        font-size: large;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+  }
